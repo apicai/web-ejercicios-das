@@ -1,0 +1,16 @@
+[book]
+language = "es"
+multilingual = false
+title = "Desarrollo de aplicaciones y servicios"
+description = "Ejercicios y prácticas"
+authors = ["Alberto Peraleda"]
+
+[output.html]
+additional-js = ["theme/theme.js"]
+additional-css = ["theme/theme.css"]
+no-section-label = true
+git-repository-url = "https://github.com/apicai/web-ejercicios-das"
+edit-url-template = "https://github.com/apicai/web-ejercicios-das/edit/main/{path}"
+
+[output.html.print]
+enable = false
