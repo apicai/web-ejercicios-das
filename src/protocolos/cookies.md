@@ -31,7 +31,7 @@ Connection: keep-alive
 Content-Type: text/html; charset=utf-8
 Content-Length: 255
 
-<!DOCTYPE html><html><head></head><body><p>Cookies leídas por JS: <code></code></p><form action="/ruta"><input type="submit" value="Envía a /ruta"></form><script>document.getElementsByTagName("div")[0].innerHTML=document.cookie.split("; ").filter(a => a.startsWith("mi-cookie-")).join("<br/>");</script></body></html>
+<!DOCTYPE html><html><head></head><body><p>Cookies leídas por JS: <code></code></p><form action="/ruta"><input type="submit" value="Envía a /ruta"></form><script>document.getElementsByTagName("code")[0].innerHTML=document.cookie.split("; ").filter(a => a.startsWith("mi-cookie-")).join("<br/>");</script></body></html>
 
 ```
 La página muestra las cookies que JavaScript (JS) es capaz de leer. El botón enviará una nueva petición al servidor pero a otra ruta. Antes de pulsarlo, vuelve a hacer el **paso 1** de la página anterior.

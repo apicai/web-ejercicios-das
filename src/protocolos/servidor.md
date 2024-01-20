@@ -83,6 +83,6 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    > **❓ Ejercicio 21:** _Explica las diferencias en las peticiones recibidas con y sin `method="post"`._
 
 
-[^1]: Para obtener la URL puedes copiarla de la pestaña abierta al pulsar "Abrir en el navegador" en el Codespace, es siempre la misma durante el ejercicio.
+[^1]: Para obtener la URL puedes copiarla de la pestaña que se abre al pulsar "Abrir en el navegador" en el Codespace: es siempre la misma durante el ejercicio.
 
-[^2]: Tras enviar tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón `⟳`. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.
+[^2]: Tras enviar, tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón `⟳`. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.
