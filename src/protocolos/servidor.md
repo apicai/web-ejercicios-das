@@ -14,7 +14,7 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
 
    > **❓ Ejercicio 17:** _Indica qué cabeceras de la petición HTTP recibida nos permitirían devolver una respuesta adaptada al tipo de dispositivo y navegador del usuario, y en el idioma en el que lo usa._
 
-1. En el terminal pega esta respuesta:
+1. En el terminal pega esta respuesta y observa lo que se ve en el navegador:
    ```http
    HTTP/1.0 200 OK
    Content-Type: text/plain
@@ -34,23 +34,12 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    ```http
    HTTP/1.0 302 Found
    Content-Length: 0
-   Location: https://www.google.com/search?q=browser+cache+301+redirect
+   Location: https://www.google.com/search?q=301+vs+302+redirect+use+cases
 
    ```
    > **❓ Ejercicio 20:** _Explica qué ha ocurrido en el navegador._
 
-1. Repite los **pasos 1, 2 y 3**, y usa esta otra respuesta:
-   ```http
-   HTTP/1.1 401 UNAUTHORIZED
-   Content-Length: 0
-   WWW-Authenticate: Basic realm="Mi servidor netcat"
-
-   ```
-   Completa en el navegador los campos para introducir un usuario y password cualquiera, y dale a enviar. Vuelve al terminal y observa como te llega el usuario y password. Para terminar, pega la respuesta del **paso 4**.
-
-   > **❓ Ejercicio 21:** _Indica la cabecera en la que le llega el usuario y password al servidor, y pon un caso de uso real en el que pienses que se produce una interacción parecida entre el navegador y una web._
-
-1. Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el **paso 1**, sustituye `http://localhost:8080` del `<form>` del HTML por la URL indicada en el entorno, rellena el formulario y envíalo.
+1. Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el **paso 1**, sustituye `http://localhost:8080` del `<form>` del HTML por la URL indicada en el entorno[^1], rellena el formulario y envíalo[^2].
 
    <details><summary>Formulario...</summary>
    <div class="sandpack" data-template="vanilla" data-height="300px">
@@ -91,4 +80,9 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
 
    Edita el HTML y quita el `method="post"`. Repite el **paso 1** y envía el formulario con ese cambio.
 
-   > **❓ Ejercicio 22:** _Explica las diferencias en las peticiones recibidas con y sin `method="post"`._
+   > **❓ Ejercicio 21:** _Explica las diferencias en las peticiones recibidas con y sin `method="post"`._
+
+
+[^1]: Para obtener la URL puedes copiarla de la pestaña que se abre al pulsar "Abrir en el navegador" en el Codespace: es siempre la misma durante el ejercicio.
+
+[^2]: Tras enviar, tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón `⟳`. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.

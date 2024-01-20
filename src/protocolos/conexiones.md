@@ -24,7 +24,7 @@ En una comunicación HTTP, los clientes siempre crean la conexión. A continuaci
    ```
    El servidor responde `OK` pero ahora el comando `telnet` no termina, continúa conectado. En HTTP 1.0 la conexión la cierra el servidor inmediatamente tras enviar la respuesta, mientras que en HTTP 1.1 se mantiene abierta a la espera de nuevas peticiones.
 
-   > **❓ Ejercicio 2:** _Identifica la cabecera HTTP en cada una de las dos respuestas obtenidas del servidor que indica dicho comportamiento._
+   > **❓ Ejercicio 2:** _Identifica la cabecera HTTP en cada una de las dos respuestas obtenidas con `OK` del servidor que indica dicho comportamiento._
 
    > 🔍 **Nota:** _Si esperamos unos segundos más, el comando `telnet` termina porque la conexión la cierra el servidor. Por un lado, las conexiones TCP son costosas de establecer por lo que interesa mantenerlas abiertas si seguidamente se va a hacer otra petición. Pero por otro lado, mantener una conexión consume recursos del servidor que no puede malgastar con un cliente que no envía datos._
 

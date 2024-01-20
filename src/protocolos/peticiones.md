@@ -5,7 +5,7 @@ La petición HTTP más sencilla se compone de `{MÉTODO} /{recurso} HTTP/{versio
 
 1. `GET` permite recuperar el recurso de la ruta indicada. 
 
-   > **❓ Ejercicio 5:** _Utilizando `telnet` construye una petición `GET` a `http://httpbin.org/anything?param1=value1&param2=value2`._
+   > **❓ Ejercicio 5:** _Utilizando `telnet` construye una petición `GET` a `http://httpbin.org/anything?param1=value1&param2=value2`. Copia y pega la petición y la respuesta del servidor._
 
    > 🔍 **Nota:** _[httpbin.org](https://httpbin.org) es un servicio para jugar con diversas funcionalidades de HTTP. La petición a `/anything`, por ejemplo, nos responde con lo que le ha llegado en la petición._
 
