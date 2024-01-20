@@ -207,7 +207,7 @@ Set-Cookie: mi-cookie-3=valor; Path=/ruta
 Set-Cookie: mi-cookie-4=valor; HttpOnly
 Connection: keep-alive
 Content-Type: text/html; charset=utf-8
-Content-Length: 255
+Content-Length: 318
 
 &lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Cookies leídas por JS: &lt;code&gt;&lt;/code&gt;&lt;/p&gt;&lt;form action=&quot;/ruta&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Envía a /ruta&quot;&gt;&lt;/form&gt;&lt;script&gt;document.getElementsByTagName(&quot;code&quot;)[0].innerHTML=document.cookie.split(&quot;; &quot;).filter(a =&gt; a.startsWith(&quot;mi-cookie-&quot;)).join(&quot;&lt;br/&gt;&quot;);&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
 
