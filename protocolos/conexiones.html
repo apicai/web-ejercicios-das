@@ -203,7 +203,7 @@ Host: httpbin.org
 </code></pre>
 <p>El servidor responde <code>OK</code> pero ahora el comando <code>telnet</code> no termina, continúa conectado. En HTTP 1.0 la conexión la cierra el servidor inmediatamente tras enviar la respuesta, mientras que en HTTP 1.1 se mantiene abierta a la espera de nuevas peticiones.</p>
 <blockquote>
-<p><strong>❓ Ejercicio 2:</strong> <em>Identifica la cabecera HTTP en cada una de las dos respuestas obtenidas del servidor que indica dicho comportamiento.</em></p>
+<p><strong>❓ Ejercicio 2:</strong> <em>Identifica la cabecera HTTP en cada una de las dos respuestas obtenidas con <code>OK</code> del servidor que indica dicho comportamiento.</em></p>
 </blockquote>
 <blockquote>
 <p>🔍 <strong>Nota:</strong> <em>Si esperamos unos segundos más, el comando <code>telnet</code> termina porque la conexión la cierra el servidor. Por un lado, las conexiones TCP son costosas de establecer por lo que interesa mantenerlas abiertas si seguidamente se va a hacer otra petición. Pero por otro lado, mantener una conexión consume recursos del servidor que no puede malgastar con un cliente que no envía datos.</em></p>

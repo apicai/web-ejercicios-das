@@ -187,34 +187,34 @@
 </li>
 <li>Configuración (tema Look&amp;Feel), etc.</li>
 </ul>
-<p>Las <strong>cookies de sesión</strong> se borran cuando se cierra el navegador, y las <strong>cookies &quot;permanentes&quot;</strong> las deja de enviar el navegador en la fecha indicada por el servidor. Repite los <strong>pasos 1, 2 y 3</strong> de la página anterior, y usa esta respuesta:</p>
+<p>Las <strong>cookies de sesión</strong> se borran cuando se cierra el navegador, y las <strong>cookies permanentes</strong> las deja de enviar el navegador en la fecha indicada por el servidor. Repite los <strong>pasos 1, 2 y 3</strong> de la página anterior, y usa esta respuesta:</p>
 <pre><code class="language-http">HTTP/1.0 200 OK
-Set-Cookie: mi-cookie-de-sesion=valor
-Set-Cookie: mi-cookie-permanente=valor; Max-Age=60
+Set-Cookie: mi-cookie-1=valor
+Set-Cookie: mi-cookie-2=valor; Max-Age=60
 Content-Length: 0
 
 </code></pre>
 <p>Vuelve a repetir los <strong>3 primeros pasos</strong>, y comprueba que ahora el navegador envía las cookies en la petición. </p>
 <blockquote>
-<p><strong>❓ Ejercicio 23:</strong> <em>Indica cuándo deja el navegador de enviar las cookies anteriores.</em></p>
+<p><strong>❓ Ejercicio 22:</strong> <em>Indica cuál de las dos cookies anteriores es permanente y qué has hecho para demostrarlo.</em></p>
 </blockquote>
 <blockquote>
-<p><strong>❓ Ejercicio 24:</strong> <em>De los 4 tipos de información que pueden contener las cookies, razona en cuáles usarías una cookie de sesión y en cuáles una permanente.</em></p>
+<p><strong>❓ Ejercicio 23:</strong> <em>De los 4 tipos de información que pueden contener las cookies, razona en cuáles usarías una cookie de sesión y en cuáles una permanente.</em></p>
 </blockquote>
 <p>Además de la caducidad, una cookie puede tener otras características, muchas de ellas relacionadas con su seguridad<sup class="footnote-reference"><a href="#3">3</a></sup>. Repite los <strong>3 pasos iniciales</strong> y envía esta respuesta:</p>
 <pre><code class="language-http">HTTP/1.1 200 OK
-Set-Cookie: mi-cookie-en-otro-path=valor; Path=/ruta
-Set-Cookie: mi-cookie-solo-http=valor; HttpOnly
+Set-Cookie: mi-cookie-3=valor; Path=/ruta
+Set-Cookie: mi-cookie-4=valor; HttpOnly
 Connection: keep-alive
 Content-Type: text/html; charset=utf-8
 Content-Length: 255
 
-&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Cookies leídas por JS: &lt;code&gt;&lt;/code&gt;&lt;/p&gt;&lt;form action=&quot;/ruta&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Envía a /ruta&quot;&gt;&lt;/form&gt;&lt;script&gt;document.getElementsByTagName(&quot;code&quot;)[0].textContent=document.cookie;&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Cookies leídas por JS: &lt;code&gt;&lt;/code&gt;&lt;/p&gt;&lt;form action=&quot;/ruta&quot;&gt;&lt;input type=&quot;submit&quot; value=&quot;Envía a /ruta&quot;&gt;&lt;/form&gt;&lt;script&gt;document.getElementsByTagName(&quot;code&quot;)[0].innerHTML=document.cookie.split(&quot;; &quot;).filter(a =&gt; a.startsWith(&quot;mi-cookie-&quot;)).join(&quot;&lt;br/&gt;&quot;);&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
 
 </code></pre>
 <p>La página muestra las cookies que JavaScript (JS) es capaz de leer. El botón enviará una nueva petición al servidor pero a otra ruta. Antes de pulsarlo, vuelve a hacer el <strong>paso 1</strong> de la página anterior.</p>
 <blockquote>
-<p><strong>❓ Ejercicio 25:</strong> <em>Compara las cookies mostradas en la página con las que llegan al servidor, y deduce por qué JS no ve todas las cookies, y cuándo se reenvía la cookie <code>mi-cookie-en-otro-path</code>.</em></p>
+<p><strong>❓ Ejercicio 24:</strong> <em>Compara las cookies mostradas en la página con las que llegan al servidor, y deduce por qué JS no ve todas las cookies, y cuándo se reenvía la cookie <code>mi-cookie-3</code>.</em></p>
 </blockquote>
 <blockquote>
 <p>⚠️ <strong>Importante</strong>: <em>para o borra el <a href="https://github.com/codespaces">Codespace</a> al terminar de usarlo.</em></p>

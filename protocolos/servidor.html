@@ -195,7 +195,7 @@
 </blockquote>
 </li>
 <li>
-<p>En el terminal pega esta respuesta:</p>
+<p>En el terminal pega esta respuesta y observa lo que se ve en el navegador:</p>
 <pre><code class="language-http">HTTP/1.0 200 OK
 Content-Type: text/plain
 Content-Length: 9
@@ -218,7 +218,7 @@ Respuesta
 <p>Vuelve a repetir los <strong>pasos 1, 2 y 3</strong>, y usa esta otra respuesta:</p>
 <pre><code class="language-http">HTTP/1.0 302 Found
 Content-Length: 0
-Location: https://www.google.com/search?q=browser+cache+301+redirect
+Location: https://www.google.com/search?q=301+vs+302+redirect+use+cases
 
 </code></pre>
 <blockquote>
@@ -226,19 +226,7 @@ Location: https://www.google.com/search?q=browser+cache+301+redirect
 </blockquote>
 </li>
 <li>
-<p>Repite los <strong>pasos 1, 2 y 3</strong>, y usa esta otra respuesta:</p>
-<pre><code class="language-http">HTTP/1.1 401 UNAUTHORIZED
-Content-Length: 0
-WWW-Authenticate: Basic realm=&quot;Mi servidor netcat&quot;
-
-</code></pre>
-<p>Completa en el navegador los campos para introducir un usuario y password cualquiera, y dale a enviar. Vuelve al terminal y observa como te llega el usuario y password. Para terminar, pega la respuesta del <strong>paso 4</strong>.</p>
-<blockquote>
-<p><strong>❓ Ejercicio 21:</strong> <em>Indica la cabecera en la que le llega el usuario y password al servidor, y pon un caso de uso real en el que pienses que se produce una interacción parecida entre el navegador y una web.</em></p>
-</blockquote>
-</li>
-<li>
-<p>Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el <strong>paso 1</strong>, sustituye <code>http://localhost:8080</code> del <code>&lt;form&gt;</code> del HTML por la URL indicada en el entorno, rellena el formulario y envíalo.</p>
+<p>Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el <strong>paso 1</strong>, sustituye <code>http://localhost:8080</code> del <code>&lt;form&gt;</code> del HTML por la URL indicada en el entorno<sup class="footnote-reference"><a href="#1">1</a></sup>, rellena el formulario y envíalo<sup class="footnote-reference"><a href="#2">2</a></sup>.</p>
 <details><summary>Formulario...</summary>
 <div class="sandpack" data-template="vanilla" data-height="300px">
 <pre data-file="index.js" data-hidden="true"></pre>
@@ -277,10 +265,16 @@ WWW-Authenticate: Basic realm=&quot;Mi servidor netcat&quot;
 </pre></div></details>
 <p>Edita el HTML y quita el <code>method=&quot;post&quot;</code>. Repite el <strong>paso 1</strong> y envía el formulario con ese cambio.</p>
 <blockquote>
-<p><strong>❓ Ejercicio 22:</strong> <em>Explica las diferencias en las peticiones recibidas con y sin <code>method=&quot;post&quot;</code>.</em></p>
+<p><strong>❓ Ejercicio 21:</strong> <em>Explica las diferencias en las peticiones recibidas con y sin <code>method=&quot;post&quot;</code>.</em></p>
 </blockquote>
 </li>
 </ol>
+<div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
+<p>Para obtener la URL puedes copiarla de la pestaña que se abre al pulsar &quot;Abrir en el navegador&quot; en el Codespace: es siempre la misma durante el ejercicio.</p>
+</div>
+<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
+<p>Tras enviar, tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón <code>⟳</code>. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.</p>
+</div>
 
                     </main>
 
