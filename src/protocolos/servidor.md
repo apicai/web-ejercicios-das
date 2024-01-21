@@ -22,11 +22,19 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
 
    Respuesta
    ```
-   > **❓ Ejercicio 18:** _¿Qué ocurre en el navegador cuando devolvemos la respuesta indicando un tamaño de contenido mayor del que realmente tiene (por ejemplo 19)?_
+   > **❓ Ejercicio 18:** _Identifica a qué elementos y pasos anteriores corresponden los símbolos ⓐⓑⓒⓓⓔⓕ marcados en el siguiente diagrama de secuencia:_
+   > <details><summary>Pulsa para mostrar el diagrama...</summary>
+   > <object type="image/svg+xml" data="./files/diagrama.secuencia.servidor.svg"></object>
+   > </details>
 
-1. Repite los **pasos anteriores** pero esta vez incluye en la respuesta esta cabecera:
+1. Repite los **pasos anteriores** pero esta vez utiliza esta respuesta:
    ```http
+   HTTP/1.0 200 OK
+   Content-Type: text/plain
+   Content-Length: 9
    Content-Disposition: attachment; filename="respuesta.txt"
+
+   Respuesta
    ```
    > **❓ Ejercicio 19:** _Explica la diferencia en el comportamiento del navegador._
 
