@@ -203,12 +203,20 @@ Content-Length: 9
 Respuesta
 </code></pre>
 <blockquote>
-<p><strong>❓ Ejercicio 18:</strong> <em>¿Qué ocurre en el navegador cuando devolvemos la respuesta indicando un tamaño de contenido mayor del que realmente tiene (por ejemplo 19)?</em></p>
+<p><strong>❓ Ejercicio 18:</strong> <em>Identifica a qué elementos y pasos anteriores corresponden los símbolos ⓐⓑⓒⓓⓔⓕ marcados en el siguiente diagrama de secuencia:</em></p>
+<details><summary>Pulsa para mostrar el diagrama...</summary>
+<object type="image/svg+xml" data="./files/diagrama.secuencia.servidor.svg"></object>
+</details>
 </blockquote>
 </li>
 <li>
-<p>Repite los <strong>pasos anteriores</strong> pero esta vez incluye en la respuesta esta cabecera:</p>
-<pre><code class="language-http">Content-Disposition: attachment; filename=&quot;respuesta.txt&quot;
+<p>Repite los <strong>pasos anteriores</strong> pero esta vez utiliza esta respuesta:</p>
+<pre><code class="language-http">HTTP/1.0 200 OK
+Content-Type: text/plain
+Content-Length: 9
+Content-Disposition: attachment; filename=&quot;respuesta.txt&quot;
+
+Respuesta
 </code></pre>
 <blockquote>
 <p><strong>❓ Ejercicio 19:</strong> <em>Explica la diferencia en el comportamiento del navegador.</em></p>
