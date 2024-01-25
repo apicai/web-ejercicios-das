@@ -15,7 +15,12 @@ const defaultOptions = {
 };
 
 document.querySelectorAll('.sandpack').forEach(r => {
-  const options = {...defaultOptions, editorHeight: r.getAttribute('data-height'), editorWidthPercentage: r.getAttribute('data-width')};
+  const options = {
+    ...defaultOptions, 
+    editorHeight: r.getAttribute('data-height'), 
+    editorWidthPercentage: r.getAttribute('data-width'),
+    showNavigator: r.getAttribute('data-navigator'),
+  };
   const props = {template: r.getAttribute('data-template') || "react", files: {}, options};
   r.addEventListener('keydown', e => e.stopPropagation());
   r.querySelectorAll('pre').forEach(p => 

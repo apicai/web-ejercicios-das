@@ -24,7 +24,7 @@ NodeJS es el entorno de ejecución que nos permite montar el entorno de desarrol
    ```
 1. Vuelve a repetir los pasos 3 y 4
 
-> **❓ Ejercicio:** _Observando el resultado de los comandos ejecutados y el comportamiento del entorno, explica qué hace cada comando `npm`[^3] asociándolos a algo en el diagrama anterior._
+> **❓ Ejercicio:** _Observando el resultado de los comandos ejecutados y el comportamiento del entorno, explica qué hace cada comando `npm`[^3] asociándolos a los símbolos ⓐⓑⓒⓓⓔ en el diagrama anterior._
 
 [^1]: En concreto, en un entorno de desarrollo en la nube llamado [Sandpack](https://sandpack.codesandbox.io/), que viene con todo lo necesario para probar código en React
 
