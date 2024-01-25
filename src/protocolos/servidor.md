@@ -47,7 +47,9 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    ```
    > **❓ Ejercicio 20:** _Explica qué ha ocurrido en el navegador._
 
-1. Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el **paso 1**, sustituye `http://localhost:8080` del `<form>` del HTML por la URL indicada en el entorno[^2], rellena el formulario y envíalo[^3].
+1. Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el **paso 1**, sustituye `http://localhost:8080` del `<form>` del HTML por la URL indicada en el Codespace, rellena el formulario y envíalo.
+
+   <details><summary>Ayuda si usas Codespaces...</summary><object type="image/gif" data="./files/codespaces.netcat.form.gif" width="100%"></object></details>
 
    <details><summary>Formulario...</summary>
    <div class="sandpack" data-template="vanilla" data-height="300px">
@@ -91,8 +93,4 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    > **❓ Ejercicio 21:** _Explica las diferencias en las peticiones recibidas con y sin `method="post"`._
 
 
-[^1]: Otra alternativa al Codespace es [instalar `netcat`](https://serverspace.io/es/support/help/how-to-install-ncat-tool-on_windows-and-linux/) en tu propio ordenador. Una vez instalado, el comando a ejecutar desde el CMD de Windows es `ncat -l 8080` y desde el terminal de Mac/Linux `nc -l 8080`.
-
-[^2]: Para obtener la URL puedes copiarla de la pestaña que se abre al pulsar "Abrir en el navegador" en el Codespace: es siempre la misma durante el ejercicio.
-
-[^3]: Tras enviar, tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón `⟳`. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.
+[^1]: Otra alternativa al Codespace es [instalar Nmap](https://nmap.org/download) en tu propio ordenador. Una vez instalado, el comando a ejecutar desde el CMD de Windows es `ncat -l 8080` y desde el terminal de Mac/Linux `nc -l 8080`. En el navegador usarás [http://localhost:8080](http://localhost:8080).
