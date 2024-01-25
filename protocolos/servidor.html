@@ -234,7 +234,8 @@ Location: https://www.google.com/search?q=301+vs+302+redirect+use+cases
 </blockquote>
 </li>
 <li>
-<p>Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el <strong>paso 1</strong>, sustituye <code>http://localhost:8080</code> del <code>&lt;form&gt;</code> del HTML por la URL indicada en el entorno<sup class="footnote-reference"><a href="#2">2</a></sup>, rellena el formulario y envíalo<sup class="footnote-reference"><a href="#3">3</a></sup>.</p>
+<p>Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el <strong>paso 1</strong>, sustituye <code>http://localhost:8080</code> del <code>&lt;form&gt;</code> del HTML por la URL indicada en el Codespace, rellena el formulario y envíalo.</p>
+<details><summary>Ayuda si usas Codespaces...</summary><object type="image/gif" data="./files/codespaces.netcat.form.gif" width="100%"></object></details>
 <details><summary>Formulario...</summary>
 <div class="sandpack" data-template="vanilla" data-height="300px">
 <pre data-file="index.js" data-hidden="true"></pre>
@@ -278,13 +279,7 @@ Location: https://www.google.com/search?q=301+vs+302+redirect+use+cases
 </li>
 </ol>
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
-<p>Otra alternativa al Codespace es <a href="https://serverspace.io/es/support/help/how-to-install-ncat-tool-on_windows-and-linux/">instalar <code>netcat</code></a> en tu propio ordenador. Una vez instalado, el comando a ejecutar desde el CMD de Windows es <code>ncat -l 8080</code> y desde el terminal de Mac/Linux <code>nc -l 8080</code>.</p>
-</div>
-<div class="footnote-definition" id="2"><sup class="footnote-definition-label">2</sup>
-<p>Para obtener la URL puedes copiarla de la pestaña que se abre al pulsar &quot;Abrir en el navegador&quot; en el Codespace: es siempre la misma durante el ejercicio.</p>
-</div>
-<div class="footnote-definition" id="3"><sup class="footnote-definition-label">3</sup>
-<p>Tras enviar, tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón <code>⟳</code>. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.</p>
+<p>Otra alternativa al Codespace es <a href="https://nmap.org/download">instalar Nmap</a> en tu propio ordenador. Una vez instalado, el comando a ejecutar desde el CMD de Windows es <code>ncat -l 8080</code> y desde el terminal de Mac/Linux <code>nc -l 8080</code>. En el navegador usarás <a href="http://localhost:8080">http://localhost:8080</a>.</p>
 </div>
 
                     </main>
