@@ -63,6 +63,6 @@ export default function enviar(texto) {
 }
 </pre></div>
 
-> **❓ Ejercicio:** _Comprende cómo funciona el componente anterior, y modifica el código para que, cuando se produzca un error al enviar[^1], en el botón ponga "Reintentar" en vez de "Enviar" y se indique en el detalle (no sólo en la consola)._
+> **❓ Ejercicio 12:** _Comprende cómo funciona el componente anterior, y modifica el código para que, cuando se produzca un error al enviar[^1], en el botón ponga "Reintentar" en vez de "Enviar" y se indique en el detalle (no sólo en la consola)._
 
 [^1]: En el ejemplo, el error se produce al enviar por segunda vez. Puedes refrescar `⟳` para volver al estado inicial.

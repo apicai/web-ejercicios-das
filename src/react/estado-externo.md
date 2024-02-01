@@ -73,9 +73,9 @@ export default function enviar(texto) {
 }
 </pre></div>
 
-> **❓ Ejercicio 1:** _Estudia cómo se ha externalizado el estado en las props de los componentes anteriores. Termina de implementar la funcionalidad de envío del texto dando valores a las props de los componentes usados en `App`._
+> **❓ Ejercicio 15:** _Estudia cómo se ha externalizado el estado en las props de los componentes anteriores. Termina de implementar la funcionalidad de envío del texto dando valores a las props de los componentes usados en `App`._
 
-> **❓ Ejercicio 2:** _Modifica `App` y `BotonEnviar` para que, en lugar de pasarle los datos, se le pase una función que realiza el envío desde el padre de la siguiente manera:_
+> **❓ Ejercicio 16:** _Modifica `App` y `BotonEnviar` para que, en lugar de pasarle los datos, se le pase una función que realiza el envío desde el padre de la siguiente manera:_
 > ```js
 > import enviar from './enviar.js';
 > ...
@@ -87,7 +87,7 @@ export default function enviar(texto) {
 > ...
 > ```
 
-> **❓ Ejercicio 3:** _Explica qué funcionalidad extra nos ha permitido implementar el cambio anterior y qué característica general hemos mejorado del componente `BotonEnviar`._
+> **❓ Ejercicio 17:** _Explica qué funcionalidad extra nos ha permitido implementar el cambio anterior y qué característica general hemos mejorado del componente `BotonEnviar`._
 
 [^1]: A estos componentes se les denomina "controlled" ya que su estado puede ser controlado desde fuera mediante props
 

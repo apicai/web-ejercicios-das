@@ -100,6 +100,6 @@ body {
 }
 </pre></div>
 
-> **❓ Pregunta 1:** _La implementación de la funcionalidad anterior provoca un problema de usabilidad, ¿cuál y por qué ocurre?_
+> **❓ Pregunta 27:** _La implementación de la funcionalidad anterior provoca un problema de usabilidad, ¿cuál y por qué ocurre?_
 
-> **❓ Pregunta 2:** _¿Por qué se produciría un bucle infinito si añadimos `setCampos(campos + 1)` dentro de `useEffect`?_
+> **❓ Pregunta 28:** _¿Por qué se produciría un bucle infinito si añadimos `setCampos(campos + 1)` dentro de `useEffect`?_

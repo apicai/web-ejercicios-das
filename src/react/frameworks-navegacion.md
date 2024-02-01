@@ -21,7 +21,7 @@ Y en lugar de utilizar los habituales `<a href='...'>...</a>`, todos **los enlac
 
 En ocasiones, un **componente padre** tiene una sección (`<Outlet/>`) donde alternativamente **muestra un hijo diferente dependiendo de la ruta actual**. Esas rutas y los componentes hijos asociados se definen en la configuración anterior bajo la propiedad `children`.
 
-<div class="sandpack" data-height="350px" data-width="60" data-navigator="true"><pre data-file="Padre1.jsx">
+<div class="sandpack" data-height="350px" data-width="55" data-navigator="true"><pre data-file="Padre1.jsx">
 import { Outlet, NavLink } from "react-router-dom";
 export default function Padre1() {
   return (
@@ -71,7 +71,7 @@ export default function Padre2() {
   );
 }
 </pre><pre data-file="Seccion1.jsx" data-hidden="true">
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Seccion1() {
   return (
     &lt;article>
@@ -83,7 +83,7 @@ export default function Seccion1() {
   );
 }
 </pre><pre data-file="Seccion2.jsx" data-hidden="true">
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Seccion2() {
   return (
     &lt;article>
@@ -95,7 +95,7 @@ export default function Seccion2() {
   );
 }
 </pre><pre data-file="Seccion3.jsx" data-hidden="true">
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Seccion3() {
   return (
     &lt;article>
@@ -104,7 +104,7 @@ export default function Seccion3() {
   );
 }
 </pre><pre data-file="Seccion4.jsx" data-hidden="true">
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Seccion4() {
   return (
     &lt;article>
@@ -116,7 +116,7 @@ export default function Seccion4() {
   );
 }
 </pre><pre data-file="Seccion5.jsx">
-import { Outlet, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 export default function Seccion5() {
   return (
     &lt;article>
@@ -138,7 +138,7 @@ header {
   background-color: #503C3C;
   color: #fff;
   display: flex;
-  padding: 10px;
+  padding: 10px 0 10px 0;
 }
 header.azul {
   background-color: #00A9FF !important;
@@ -230,4 +230,4 @@ createRoot(document.getElementById("root")).render(
 }
 </pre></div>
 
-> **❓ Ejercicio:** _Estudia el código anterior y comprende cómo se ha configurado la navegación entre componentes. Completa el código para que el componente con la Sección 5 se muestre al pulsar en dicho menú. Después, completa el código de Sección5 para que funcione el botón en su interior._
+> **❓ Ejercicio 33:** _Estudia el código anterior y comprende cómo se ha configurado la navegación entre componentes. Completa el código para que el componente con la Sección 5 se muestre al pulsar en dicho menú. Después, completa el código de Sección5 para que funcione el botón en su interior._

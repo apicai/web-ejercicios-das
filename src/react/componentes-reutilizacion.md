@@ -29,6 +29,6 @@ export default function App() {
 
 Los atributos de los componentes en React se llaman "props". Opcionalmente, pueden tener valores por defecto: `function NombreComponente({prop1 = valor, prop2, ...})`.
 
-> **❓ Ejercicio 1:** _Modifica el componente `Figura` anterior para que muestre "Sin título" si no se le pasa ningún `caption`._
+> **❓ Ejercicio 2:** _Modifica el componente `Figura` anterior para que muestre "Sin título" si no se le pasa ningún `caption`._
 
-> **❓ Ejercicio 2:** _Modifica el ejemplo anterior para que, cuando no se pase `url`, se devuelva `<h1>⚠️</h1>` en vez de `<img...>`, utilizando el [operador condicional](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) de JS._
+> **❓ Ejercicio 3:** _Modifica el ejemplo anterior para que, cuando no se pase `url`, se devuelva `<h1>⚠️</h1>` en vez de `<img...>`, utilizando el [operador condicional](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) de JS._

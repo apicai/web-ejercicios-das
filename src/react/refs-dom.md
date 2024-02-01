@@ -136,6 +136,6 @@ const root = createRoot(document.getElementById("root"));
 root.render(&lt;App />);
 </pre></div>
 
-> **❓ Ejercicio 1:** _Añade trazas al código anterior para demostrar que `nombreRef` en el primer "render" no tiene valor pero que, tras él, React ya ha generado el elemento del DOM ([durante el "commit"](./tecnologias.html)) y lo ha asignado al ref._
+> **❓ Ejercicio 23:** _Añade trazas al código anterior para demostrar que `nombreRef` en el primer "render" no tiene valor pero que, tras él, React ya ha generado el elemento del DOM ([durante el "commit"](./tecnologias.html)) y lo ha asignado al ref._
 
-> **❓ Ejercicio 2:** _Añade el código necesario para que el campo email también sea obligatorio._
+> **❓ Ejercicio 24:** _Añade el código necesario para que el campo email también sea obligatorio._

@@ -109,6 +109,6 @@ body {
 }
 </pre></div>
 
-> **❓ Ejercicio 1:** _React necesita identificar unívocamente cada elemento de la lista para poder optimizar su repintado cuando cambia (al ordenarla, o al añadir o borrar elementos). Observa el error que aparece en la consola e intenta resolverlo leyendo la referencia indicada en el mensaje._
+> **❓ Ejercicio 7:** _React necesita identificar unívocamente cada elemento de la lista para poder optimizar su repintado cuando cambia (al ordenarla, o al añadir o borrar elementos). Observa el error que aparece en la consola e intenta resolverlo leyendo la referencia indicada en el mensaje._
 
-> **❓ Ejercicio 2:** _Otra funcionalidad típica en las aplicaciones web es permitir al usuario filtrar los resultados obtenidos. Modifica el código anterior para mostrar solo los productos con stock, utilizando la función [`filter()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)._
+> **❓ Ejercicio 8:** _Otra funcionalidad típica en las aplicaciones web es permitir al usuario filtrar los resultados obtenidos. Modifica el código anterior para mostrar solo los productos con stock, utilizando la función [`filter()`](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)._

@@ -124,6 +124,6 @@ small {
 }
 </pre></div>
 
-> **❓ Ejercicio 1:** _Explica por qué es necesaria la dependencia `[idProd]` en el efecto._
+> **❓ Ejercicio 30:** _Explica por qué es necesaria la dependencia `[idProd]` en el efecto._
 
-> **❓ Ejercicio 2:** _Elimina la función de limpieza del efecto. A continuación, selecciona el producto "Cosa 4" y, seguidamente, sin esperar a que carguen sus datos, selecciona el "Cosa 1". Explica qué ha sucedido, por qué, y cómo la función de limpieza lo resuelve._
+> **❓ Ejercicio 31:** _Elimina la función de limpieza del efecto. A continuación, selecciona el producto "Cosa 4" y, seguidamente, sin esperar a que carguen sus datos, selecciona el "Cosa 1". Explica qué ha sucedido, por qué, y cómo la función de limpieza lo resuelve._

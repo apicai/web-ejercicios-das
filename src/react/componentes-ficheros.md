@@ -11,7 +11,7 @@ Para **compartir** un componente de un fichero hay que **exportarlo**, y para **
 | **Código:**  | `export default Compartido() {}` | `import Compartido from './Compartido.js';` |
 
 
-> **❓ Ejercicio:** _Corrige el siguiente código para que se exporten e importen correctamente los componentes utilizados en `App.js`._
+> **❓ Ejercicio 6:** _Corrige el siguiente código para que se exporten e importen correctamente los componentes utilizados en `App.js`._
 > <div class="sandpack" data-width="73"><pre data-file="App.js">
 > export default function App() { 
 >   return (
