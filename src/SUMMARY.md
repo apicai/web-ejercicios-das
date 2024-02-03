@@ -20,7 +20,7 @@
 - [Prerrequisitos](html/prerrequisitos.md)
 - [Login](html/login.md)
 - [Registro](html/registro.md)
-- [Inicio](html/inicio.md)
+- [Principal](html/principal.md)
 - [Perfil](html/perfil.md)
 - [Otros](html/otros.md)
 
