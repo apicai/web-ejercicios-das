@@ -177,7 +177,7 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="htmlcssjs"><a class="header" href="#htmlcssjs">HTML+CSS+JS</a></h1>
-<p>HTML+CSS+JS <strong>son los lenguajes nativos del navegador</strong> que nos permiten, respectivamente, organizar semáticamente la información, presentarla y añadirle comportamiento. Para ejecutarlos, el navegador descarga previamente los documentos HTML, estilos CSS y scripts JS mediante HTTP.</p>
+<p>HTML+CSS+JS <strong>son los lenguajes nativos del navegador</strong> que nos permiten, respectivamente, organizar semánticamente la información, presentarla y añadirle comportamiento. Para ejecutarlos, el navegador descarga previamente los documentos HTML, estilos CSS y scripts JS mediante HTTP.</p>
 <p>Para practicar los lenguajes, vamos a implementar una aplicación web que nos permita registrarnos, loguearnos, ver nuestro perfil, editarlo, darnos de baja y desloguearnos. Utilizará una <strong>API REST JSON ya creada</strong> con estos endpoints:</p>
 <div class="table-wrapper"><table><thead><tr><th>Metodo</th><th>Ruta</th><th>Descripción</th><th>Respuestas</th></tr></thead><tbody>
 <tr><td><code>POST</code></td><td><code>/api/users</code></td><td>Crea un usuario nuevo con los datos pasados en el cuerpo en formato JSON: <code>{&quot;email&quot;: &quot;*&quot;, &quot;password&quot;: &quot;*&quot;, ...otros...}</code>. Admite cualquier campo, siendo obligatorios <code>&quot;email&quot;</code> y <code>&quot;password&quot;</code></td><td><code>201</code> si OK, <code>400</code> si faltan campos obligatorios, <code>409</code> si ya existe un usuario registrado con mismo email</td></tr>
