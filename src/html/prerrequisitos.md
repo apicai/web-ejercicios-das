@@ -1,7 +1,7 @@
 # HTML+CSS+JS
 ## Prerrequisitos
 
-Los **navegadores recomendados** son [Firefox](https://www.mozilla.org/es-ES/firefox/new/) o [Chrome](https://www.google.com/intl/es_es/chrome/). Se utilizarán sus herramientas para desarrolladores que se abren en la opción "Inspeccionar" del menú que aparece al pulsar con el botón izquierdo del ratón dentro de cualquier página web.
+Los **navegadores recomendados** son [Firefox](https://www.mozilla.org/es-ES/firefox/new/) o [Chrome](https://www.google.com/intl/es_es/chrome/). Se utilizarán sus herramientas para desarrolladores que se abren en la opción "Inspeccionar" del menú que aparece al pulsar con el botón derecho del ratón dentro de cualquier página web.
 
 Para desarrollar se utilizará [Visual Studio Code](https://code.visualstudio.com/) que trae soporte para [autocompletado de código](https://code.visualstudio.com/docs/languages/html). Para probar es necesaria la extensión [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
 

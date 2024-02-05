@@ -1,6 +1,6 @@
 # HTML+CSS+JS
 
-HTML+CSS+JS **son los lenguajes nativos del navegador** que nos permiten, respectivamente, organizar semáticamente la información, presentarla y añadirle comportamiento. Para ejecutarlos, el navegador descarga previamente los documentos HTML, estilos CSS y scripts JS mediante HTTP.
+HTML+CSS+JS **son los lenguajes nativos del navegador** que nos permiten, respectivamente, organizar semánticamente la información, presentarla y añadirle comportamiento. Para ejecutarlos, el navegador descarga previamente los documentos HTML, estilos CSS y scripts JS mediante HTTP.
 
 Para practicar los lenguajes, vamos a implementar una aplicación web que nos permita registrarnos, loguearnos, ver nuestro perfil, editarlo, darnos de baja y desloguearnos. Utilizará una **API REST JSON ya creada** con estos endpoints:
 
