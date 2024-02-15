@@ -14,6 +14,6 @@ useEffect(() => {
 }, [dep1, dep2]);
 ```
 
-> **❓ Pregunta:** _¿Cómo se arreglaría el problema de usabilidad del componente de la página anterior?_
+> **❓ Pregunta 29:** _¿Cómo se arreglaría el problema de usabilidad del componente de la página anterior?_
 
 [^1]: En general, serán estados o props del componente, o cualquier variable calculada para el repintado

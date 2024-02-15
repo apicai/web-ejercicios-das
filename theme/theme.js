@@ -36,7 +36,7 @@
   // Avoid hidden text in textareas with scroll
   function fitContent(element) {
     element.style.height = "5px";
-    element.style.height = (element.scrollHeight)+"px";
+    element.style.height = (element.scrollHeight + 12)+"px";
   }
   // All questions in current page
   function getQuestions() {
@@ -74,7 +74,7 @@
 
   getQuestions().forEach((q, i) => answerArea(q, i));
   getAnswers().forEach((a, i) => {
-    a.oninput = () => fitContent(a) || save(a.id, a.value) || updateAnswerStats();
+    a.onkeyup = () => fitContent(a) || save(a.id, a.value) || updateAnswerStats();
     a.value = read(a.id);
     a.value && fitContent(a);
   });

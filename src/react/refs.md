@@ -51,6 +51,6 @@ button {
 }
 </pre></div>
 
-> **❓ Ejercicio:** _Añade el código necesario para que al pulsar sobre el reloj anterior, éste se pause o se reanude utilizando [`clearInverval`](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)_
+> **❓ Ejercicio 22:** _Añade el código necesario para que al pulsar sobre el reloj anterior, éste se pause o se reanude utilizando [`clearInverval`](https://developer.mozilla.org/en-US/docs/Web/API/clearInterval)_
 
 > 🔍 **Nota:** _En el ejemplo anterior, en vez de usar el `setFrame(frame + 1)` habitual, utilizamos `setEstado(frame => frame + 1)` por que, para calcular el siguiente valor, necesitamos su valor más actual (que nos proporciona React cuando llama a esa función)._

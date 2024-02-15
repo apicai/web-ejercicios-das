@@ -57,8 +57,8 @@ export default function enviar(texto) {
 }
 </pre></div>
 
-> **❓ Ejercicio 1:** _Comprende cómo funciona el componente anterior. Modifica el código para que se borre el texto una vez se ha realizado su envío._
+> **❓ Ejercicio 13:** _Comprende cómo funciona el componente anterior. Modifica el código para que se borre el texto una vez se ha realizado su envío._
 
-> **❓ Ejercicio 2:** _Explica por qué es necesario el `value={texto}` del `textarea` observando qué ocurre cuando no está puesto._
+> **❓ Ejercicio 14:** _Explica por qué es necesario el `value={texto}` del `textarea` observando qué ocurre cuando no está puesto._
 
 [^1]: A estos componentes se les denomina "uncontrolled" ya que su estado no puede ser controlado desde fuera mediante props

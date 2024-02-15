@@ -43,7 +43,7 @@ const root = createRoot(document.getElementById("root"));
 root.render(&lt;App />);
 </pre></div>
 
-> **❓ Ejercicio 1:** _Añade trazas para comprobar que, efectivamente, las interacciones desencadenan los 3 pasos anteriores. Para ello añade las siguientes líneas en los lugares convenientes del código anterior, y comprueba que se ven en el orden correcto en la consola:_
+> **❓ Ejercicio 9:** _Añade trazas para comprobar que, efectivamente, las interacciones desencadenan los 3 pasos anteriores. Para ello añade las siguientes líneas en los lugares convenientes del código anterior, y comprueba que se ven en el orden correcto en la consola:_
 > ```js
 > console.log('Evento capturado')
 > ```
@@ -54,9 +54,9 @@ root.render(&lt;App />);
 > console.log('Componente repintado')
 > ```
 
-> **❓ Ejercicio 2:** _Para evitar que el usuario introduzca más caracteres de los permitidos, añade al elemento `textarea` la prop `maxLength` con el valor adecuado. Explica el comportamiento de las trazas del ejercicio 1 con esta modificación, cuando se llega al máximo número de caracteres permitidos._
+> **❓ Ejercicio 10:** _Para evitar que el usuario introduzca más caracteres de los permitidos, añade al elemento `textarea` la prop `maxLength` con el valor adecuado. Explica el comportamiento de las trazas del ejercicio 1 con esta modificación, cuando se llega al máximo número de caracteres permitidos._
 
-> **❓ Ejercicio 3:** _Observa y explica el comportamiento cuando, en lugar de `const [gastado, setGastado] = useState(0)`, se utiliza una variable normal de JS:_
+> **❓ Ejercicio 11:** _Observa y explica el comportamiento cuando, en lugar de `const [gastado, setGastado] = useState(0)`, se utiliza una variable normal de JS:_
 > ```js
 > let [gastado, setGastado] = [0, g => gastado = g];
 > ```

@@ -89,9 +89,9 @@ body {
 }
 </pre></div>
 
-> **❓ Ejercicio 1:** _Añade un campo adicional "Título" al formulario._
+> **❓ Ejercicio 18:** _Añade un campo adicional "Título" al formulario._
 
-> **❓ Ejercicio 2:** _¿Por qué no es correcto utilizar `campo.mensaje = event.target.value` en lugar de `setCampos({...campos, mensaje: event.target.value});` para actualizar su valor en el estado?_
+> **❓ Ejercicio 19:** _¿Por qué no es correcto utilizar `campo.mensaje = event.target.value` en lugar de `setCampos({...campos, mensaje: event.target.value});` para actualizar su valor en el estado?_
 
 > 🔍 **Nota:** _El tratamiento de los cambios en los campos de formulario se puede simplificar utilizando una sola función para todos ellos. Esta función hace uso de conceptos avanzados de JS y React:_
 > ```js
@@ -103,4 +103,4 @@ body {
 > <object type="image/svg+xml" data="./img/usestate.set.function.svg" width="100%"></object>
 > </details>
 
-> **❓ Ejercicio 3:** _Reemplaza las funciones de cambio en los campos del formulario anterior por la indicada en la nota._
+> **❓ Ejercicio 20:** _Reemplaza las funciones de cambio en los campos del formulario anterior por la indicada en la nota._

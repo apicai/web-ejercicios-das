@@ -146,4 +146,4 @@ p {
 }
 </pre></div>
 
-> **❓ Ejercicio:** _Añade un botón que permita mostrar sólo los productos en el carrito._
+> **❓ Ejercicio 21:** _Añade un botón que permita mostrar sólo los productos en el carrito._

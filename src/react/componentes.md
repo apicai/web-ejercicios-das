@@ -28,5 +28,5 @@ export default function App() {
 > &lt;/html>
 > </pre></div></details><br/>
 
-> **❓ Ejercicio:** _Modifica el ejemplo anterior para que el componente React también muestre la [imagen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) de esta URL: `https://picsum.photos/200`. Si tienes dificultades puedes usar este conversor [HTML➜JSX](https://transform.tools/html-to-jsx)._
+> **❓ Ejercicio 1:** _Modifica el ejemplo anterior para que el componente React también muestre la [imagen](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) de esta URL: `https://picsum.photos/200`. Si tienes dificultades puedes usar este conversor [HTML➜JSX](https://transform.tools/html-to-jsx)._
 

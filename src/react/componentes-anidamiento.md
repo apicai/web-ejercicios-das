@@ -75,8 +75,8 @@ body {
 }
 </pre></div>
 
-> **❓ Pregunta 1:** _¿Cuál será el código HTML resultante del ejemplo anterior que acabará mostrando el navegador?_
+> **❓ Pregunta 4:** _¿Cuál será el código HTML resultante del ejemplo anterior que acabará mostrando el navegador?_
 
-> **❓ Ejercicio 2:** _Modifica el JSX del componente `App` anterior para que se muestre de la siguiente manera:_
+> **❓ Ejercicio 5:** _Modifica el JSX del componente `App` anterior para que se muestre de la siguiente manera:_
 >
 > <object type="image/svg+xml" data="./img/anidamiento.ejercicio.2.svg"></object>
