@@ -13,4 +13,4 @@ Sobre el proyecto descargado y abierto en el VSCode realiza las siguientes tarea
 
 > **📚 Tarea 15:** _Añade un [botón](https://www.w3schools.com/jsref/event_onclick.asp) para dar de baja al usuario._
 
-> **📚 Tarea 16:** _Completa la funcionalidad de dar de baja llamando al [API](intro.md) de borrar la sesión. En caso de éxito, navega a la página `login.html`. Antes de proceder con la baja, [solicita confirmación](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) al usuario._
+> **📚 Tarea 16:** _Completa la funcionalidad de dar de baja llamando al [API adecuada](intro.md). En caso de éxito, navega a la página `login.html`. Antes de proceder con la baja, [solicita confirmación](https://developer.mozilla.org/en-US/docs/Web/API/Window/confirm) al usuario._
