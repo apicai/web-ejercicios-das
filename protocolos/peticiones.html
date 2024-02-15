@@ -181,7 +181,7 @@
 <p>La petición HTTP más sencilla se compone de <code>{MÉTODO} /{recurso} HTTP/{version}\r\n\r\n</code>. El método<sup class="footnote-reference"><a href="#1">1</a></sup> indica la acción a realizar, y el recurso<sup class="footnote-reference"><a href="#2">2</a></sup> indica la entidad sobre la que realizar la acción. Adicionalmente, se pueden incluir cabeceras y un cuerpo para enviar datos.</p>
 <ol>
 <li>
-<p><code>GET</code> permite recuperar el recurso de la ruta indicada. </p>
+<p><code>GET</code> permite recuperar el recurso de la ruta indicada.</p>
 <blockquote>
 <p><strong>❓ Ejercicio 5:</strong> <em>Utilizando <code>telnet</code> construye una petición <code>GET</code> a <code>http://httpbin.org/anything?param1=value1&amp;param2=value2</code>. Copia y pega la petición y la respuesta del servidor.</em></p>
 </blockquote>
@@ -208,14 +208,14 @@ Content-Length: 5
 </blockquote>
 </li>
 <li>
-<p>Cuando mandamos datos, normalmente también se indica qué tipo de datos son (texto, imagen, binario,etc.)<sup class="footnote-reference"><a href="#3">3</a></sup>. Existe la posibilidad de mandar en la misma petición varios datos de diferente tipo. Para ello se usan envíos &quot;multipart&quot;. </p>
+<p>Cuando mandamos datos, normalmente también se indica qué tipo de datos son (texto, imagen, binario,etc.)<sup class="footnote-reference"><a href="#3">3</a></sup>. Existe la posibilidad de mandar en la misma petición varios datos de diferente tipo. Para ello se usan envíos "multipart".</p>
 <ol>
 <li>Entra en <a href="https://httpie.io/app">Httpie</a>.</li>
 <li>Envía un <code>POST</code> multipart a <code>https://httpbin.org/anything</code>.</li>
 <li>Previsualiza la petición enviada.</li>
 </ol>
 <blockquote>
-<p><strong>❓ Ejercicio 9:</strong> <em>Como usuario de páginas web, ¿en qué caso de uso real has podido usar &quot;multipart&quot;?</em></p>
+<p><strong>❓ Ejercicio 9:</strong> <em>Como usuario de páginas web, ¿en qué caso de uso real has podido usar "multipart"?</em></p>
 </blockquote>
 <blockquote>
 <p>🔍 <strong>Nota:</strong> <em>Aparte de los navegadores web y sus herramientas para desarrolladores, existen muchas aplicaciones para hacer peticiones HTTP. La más popular es <a href="https://www.postman.com/">Postman</a>, aunque hay muchas más con interfaz gráfica. También hay clientes por línea de comandos como <a href="https://curl.se/"><code>curl</code></a> y <a href="https://en.wikipedia.org/wiki/Wget"><code>wget</code></a>. <a href="https://httpie.io/">Httpie</a> tiene versión gráfica y por línea de comandos.</em></p>
@@ -224,9 +224,9 @@ Content-Length: 5
 <li>
 <p>Hasta ahora, hemos usado HTTP 1.0 y 1.1. HTTP 2 y 3 son protocolos binarios y, HTTP/3 además no usa TCP, por lo que no podemos probarlo con <code>telnet</code>. Además, no todos los clientes y servidores los implementan por lo que para usarlos se necesita negociar el protocolo previamente mediante HTTP o TLS. Ejecuta los siguientes comandos:</p>
 <pre><code class="language-bash"># Negociación vía HTTP/1.1:
-curl http://httpbin.org/anything -d &quot;12345&quot; -v --http2
+curl http://httpbin.org/anything -d "12345" -v --http2
 # Negociación vía TLS/ALPN:
-curl https://httpbin.org/anything -d &quot;12345&quot; -v --http2
+curl https://httpbin.org/anything -d "12345" -v --http2
 </code></pre>
 <blockquote>
 <p><strong>❓ Ejercicio 10:</strong> <em>¿Cuál de las dos peticiones anteriores acaba finalmente usando HTTP 2? Indica una línea de la respuesta que así lo confirma.</em></p>
