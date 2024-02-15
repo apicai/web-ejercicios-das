@@ -8,7 +8,7 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    nc -l -s 0.0.0.0 -p 8080
    ```
 
-1. Abre en el navegador la URL que se indica al ejecutar el comando anterior en el terminal de Codespaces.
+1. Abre en el navegador la URL que se indica al ejecutar el comando anterior en el terminal de Codespaces[^1].
 
 1. Vuelve al terminal y comprueba que ha llegado la petición.
 
@@ -22,11 +22,19 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
 
    Respuesta
    ```
-   > **❓ Ejercicio 18:** _¿Qué ocurre en el navegador cuando devolvemos la respuesta indicando un tamaño de contenido mayor del que realmente tiene (por ejemplo 19)?_
+   > **❓ Ejercicio 18:** _Identifica a qué elementos y pasos anteriores corresponden los símbolos ⓐⓑⓒⓓⓔⓕ marcados en el siguiente diagrama de secuencia:_
+   > <details><summary>Pulsa para mostrar el diagrama...</summary>
+   > <object type="image/svg+xml" data="./files/diagrama.secuencia.servidor.svg"></object>
+   > </details>
 
-1. Repite los **pasos anteriores** pero esta vez incluye en la respuesta esta cabecera:
+1. Repite los **pasos anteriores** pero esta vez utiliza esta respuesta:
    ```http
+   HTTP/1.0 200 OK
+   Content-Type: text/plain
+   Content-Length: 9
    Content-Disposition: attachment; filename="respuesta.txt"
+
+   Respuesta
    ```
    > **❓ Ejercicio 19:** _Explica la diferencia en el comportamiento del navegador._
 
@@ -39,7 +47,9 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    ```
    > **❓ Ejercicio 20:** _Explica qué ha ocurrido en el navegador._
 
-1. Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el **paso 1**, sustituye `http://localhost:8080` del `<form>` del HTML por la URL indicada en el entorno[^1], rellena el formulario y envíalo[^2].
+1. Vamos a ver cómo el navegador manda los datos de un formulario web. Repite el **paso 1**, sustituye `http://localhost:8080` del `<form>` del HTML por la URL indicada en el Codespace, rellena el formulario y envíalo.
+
+   <details><summary>Ayuda si usas Codespaces...</summary><object type="image/gif" data="./files/codespaces.netcat.form.gif" width="100%"></object></details>
 
    <details><summary>Formulario...</summary>
    <div class="sandpack" data-template="vanilla" data-height="300px">
@@ -83,6 +93,4 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
    > **❓ Ejercicio 21:** _Explica las diferencias en las peticiones recibidas con y sin `method="post"`._
 
 
-[^1]: Para obtener la URL puedes copiarla de la pestaña que se abre al pulsar "Abrir en el navegador" en el Codespace: es siempre la misma durante el ejercicio.
-
-[^2]: Tras enviar, tal vez se quede el marco del formulario en blanco. Para recuperarlo, pulsa en su botón `⟳`. También, puede saltar una advertencia de envío dentro de ese mismo marco, que se puede aceptar sin problema.
+[^1]: Otra alternativa al Codespace es [instalar Nmap](https://nmap.org/download) en tu propio ordenador. Una vez instalado, el comando a ejecutar desde el CMD de Windows es `ncat -l 8080` y desde el terminal de Mac/Linux `nc -l 8080`. En el navegador usarás [http://localhost:8080](http://localhost:8080).
