@@ -16,3 +16,5 @@ Para preparar el **entorno de desarrollo local**:
 1. Pulsa "Go Live" en la barra inferior a la derecha para probar la web en el navegador
 
 1. Realiza cambios en el editor y salva para ver el resultado automáticamente en el navegador
+
+1. Familiarízate con el resto de ficheros HTML, JS y CSS que componen el proyecto.
