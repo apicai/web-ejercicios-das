@@ -22,7 +22,7 @@ En una comunicación HTTP, los servidores permanecen a la escucha de peticiones 
 
    Respuesta
    ```
-   > **❓ Ejercicio 18:** _Identifica a qué elementos y pasos anteriores corresponden los símbolos ⓐⓑⓒⓓⓔⓕ marcados en el siguiente diagrama de secuencia:_
+   > **❓ Ejercicio 18:** _Identifica a qué elementos y pasos anteriores (1, 2, 3, 4) corresponden los símbolos ⓐⓑⓒⓓⓔⓕ marcados en el siguiente diagrama de secuencia:_
    > <details><summary>Pulsa para mostrar el diagrama...</summary>
    > <object type="image/svg+xml" data="./files/diagrama.secuencia.servidor.svg"></object>
    > </details>
