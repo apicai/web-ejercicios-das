@@ -1,9 +1,8 @@
-# React
-## Frameworks
-### Navegación
-#### Acciones
+# React frameworks
+## Navegación
+### Acciones
 
-Los componentes, además de presentar datos, permiten al usuario realizar **acciones que crean, actualizan o borran datos en el servidor**. React Router facilita implementar esas operaciones mediante su componente `<Form>` y una función de envío que definimos en el `action` de la configuración de la ruta.
+Los componentes, además de presentar datos, permiten al usuario realizar **acciones que crean, actualizan o borran datos en el servidor**. React Router facilita implementar esas operaciones mediante su componente `<Form>`[^1] y una función de envío que definimos en el `action` de la configuración de la ruta.
 
 ```js
 import { Form } from "react-router-dom";
@@ -182,4 +181,6 @@ createRoot(document.getElementById("root")).render(
 }
 </pre></div>
 
-> **❓ Ejercicio 36:** _Estudia el código anterior y comprende cómo se ha implementado el login. Completa el código para que al pulsar el botón "Salir" se llame al API `logout()` y se redirija a la ruta inicial de login._
+> **❓ Ejercicio 5:** _Estudia el código anterior y comprende cómo se ha implementado el login. Completa el código para que al pulsar el botón "Salir" se llame al API `logout()` y se redirija a la ruta inicial de login._
+
+[^1]: Su objetivo es parecido al del elemento `<form>` nativo de HTML, pero la forma en la que se realiza es totalmente diferente.

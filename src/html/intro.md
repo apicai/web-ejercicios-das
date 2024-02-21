@@ -4,7 +4,7 @@ HTML+CSS+JS **son los lenguajes nativos del navegador** que nos permiten, respec
 
 Para practicar los lenguajes, vamos a implementar una aplicación web que nos permita registrarnos, loguearnos, ver nuestro perfil, editarlo, darnos de baja y desloguearnos. Utilizará una **API REST JSON ya creada** con estos endpoints:
 
-| Metodo | Ruta | Descripción | Respuestas |
+| Método | Ruta | Descripción | Respuestas |
 |--------|------|-------------|------------|
 | `POST` | `/api/users` | Crea un usuario nuevo con los datos pasados en el cuerpo en formato JSON: `{"email": "*", "password": "*", ...otros...}`. Admite cualquier campo, siendo obligatorios `"email"` y `"password"` | `201` si OK, `400` si faltan campos obligatorios, `409` si ya existe un usuario registrado con mismo email |
 | `POST` | `/api/users/login` | Crea una sesión que nos permite acceder al resto de recursos del API en nombre del usuario indicado en el cuerpo en formato JSON: `{"email": "*", "password": "*"}` | `201` si OK, `401` si credenciales incorrectas |

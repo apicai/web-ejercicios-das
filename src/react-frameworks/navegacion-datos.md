@@ -1,7 +1,6 @@
-# React
-## Frameworks
-### Navegación
-#### Datos
+# React frameworks
+## Navegación
+### Datos
 
 Es habitual que **los componentes presenten datos provenientes del servidor**. React Router nos facilita cargar esos datos cuando se navegue a dichos componentes. 
 
@@ -209,6 +208,6 @@ createRoot(document.getElementById("root")).render(
 }
 </pre></div>
 
-> **❓ Ejercicio 34:** _Estudia el código anterior y comprende cómo se ha configurado la carga de los datos de la "Sección 1". Completa el código para que en la "Sección 2" se carguen los datos que devuelve el API `getIp()`. Luego, utiliza `getDataWithError()` en su lugar y describe el comportamiento._
+> **❓ Ejercicio 3:** _Estudia el código anterior y comprende cómo se ha configurado la carga de los datos de la "Sección 1". Completa el código para que en la "Sección 2" se carguen los datos que devuelve el API `getIp()`. Luego, utiliza `getDataWithError()` en su lugar y describe el comportamiento._
 
-> **❓ Ejercicio 35:** _Identifica en `Padre.jsx` el código que detecta que se están cargando datos para modificar la presentación e indicarlo al usuario._
+> **❓ Ejercicio 4:** _Identifica en `Padre.jsx` el código que detecta que se están cargando datos para modificar la presentación e indicarlo al usuario._
