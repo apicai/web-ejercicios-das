@@ -1,6 +1,5 @@
-# React
-## Frameworks
-### Navegación
+# React Frameworks
+## Navegación
 
 [React Router](https://reactrouter.com/en/main/start/overview) es una librería que gestiona la navegación y la carga de los componentes React dentro de una página.
 
@@ -230,4 +229,4 @@ createRoot(document.getElementById("root")).render(
 }
 </pre></div>
 
-> **❓ Ejercicio 33:** _Estudia el código anterior y comprende cómo se ha configurado la navegación entre componentes. Completa el código para que el componente con la Sección 5 se muestre al pulsar en dicho menú. Después, completa el código de Sección5 para que funcione el botón en su interior._
+> **❓ Ejercicio 2:** _Estudia el código anterior y comprende cómo se ha configurado la navegación entre componentes. Completa el código para que el componente con la Sección 5 se muestre al pulsar en dicho menú. Después, completa el código de Sección5 para que funcione el botón en su interior._
