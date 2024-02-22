@@ -14,13 +14,9 @@ import productos from './data.js';
 export default function App() {
   const [carrito, setCarrito] = useState([]);
   function actualizaCarrito(prod) {
-    // Primero, intentamos eliminarlo del array
-    let nuevoCarrito = carrito.filter(id => prod.id !== id);
-    // Si no estaba en el array, entonces lo añadimos
-    if (nuevoCarrito.length === carrito.length) {
-      nuevoCarrito = [...carrito, prod.id];
+    if (!carrito.includes(prod.id)) {
+      setCarrito([...carrito, prod.id]);
     }
-    setCarrito(nuevoCarrito);
   }
   function nombreProducto(prod) {
     return (carrito.includes(prod.id) ? '🛍' : '') + 
@@ -146,4 +142,4 @@ p {
 }
 </pre></div>
 
-> **❓ Ejercicio 21:** _Añade un botón que permita mostrar sólo los productos en el carrito._
+> **❓ Ejercicio 21:** _Modifica el comportamiento del ejemplo anterior para que, al pulsar sobre un producto que ya esté en el carrito, se quite del carrito utilizando `filter()`._

@@ -1,4 +1,4 @@
-# React Frameworks
+# React frameworks
 ## Navegación
 
 [React Router](https://reactrouter.com/en/main/start/overview) es una librería que gestiona la navegación y la carga de los componentes React dentro de una página.
