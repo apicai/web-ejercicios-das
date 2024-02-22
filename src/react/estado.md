@@ -45,10 +45,10 @@ root.render(&lt;App />);
 
 > **❓ Ejercicio 9:** _Añade trazas para comprobar que, efectivamente, las interacciones desencadenan los 3 pasos anteriores. Para ello añade las siguientes líneas en los lugares convenientes del código anterior, y comprueba que se ven en el orden correcto en la consola:_
 > ```js
-> console.log('Evento capturado')
+> console.log('Evento capturado');
 > ```
 > ```js
-> console.log('Estado cambiado')
+> console.log('Estado cambiado');
 > ```
 > ```js
 > console.log('Componente repintado')

@@ -2,7 +2,7 @@
 ## Estado
 ### Objetos
 
-En ocasiones interesa mantener los **datos del estado en un objeto JS**. Por ejemplo, los campos introducidos en un formulario podemos gestionarlos en único objeto y estado, en lugar de tener varios estados para cada campo.
+En ocasiones, interesa mantener los **datos del estado en un objeto JS**. Por ejemplo, los campos introducidos en un formulario podemos gestionarlos en único objeto y estado, en lugar de tener varios estados para cada campo.
 
 <div class="sandpack" data-height="500px" data-width="75"><pre data-file="App.js">
 import { useState } from 'react';
