@@ -181,12 +181,13 @@
 <h3 id="ficheros"><a class="header" href="#ficheros">Ficheros</a></h3>
 <p>React siempre parte de un componente raíz<sup class="footnote-reference"><a href="#1">1</a></sup> en el que estarán anidados otros que completan una página concreta. Normalmente, se suelen separar los componentes en diferentes ficheros para que sea más fácil encontrarlos, mantenerlos y reusarlos en diferentes páginas o componentes.</p>
 <p>Para <strong>compartir</strong> un componente de un fichero hay que <strong>exportarlo</strong>, y para <strong>utilizarlo</strong> desde otro componente en otro fichero hay que <strong>importarlo</strong>:</p>
-<div class="table-wrapper"><table><thead><tr><th><strong>Fichero:</strong></th><th><code>Compartido.js</code></th><th><code>Padre.js</code></th></tr></thead><tbody>
-<tr><td><strong>Código:</strong></td><td><code>export default Compartido() {}</code></td><td><code>import Compartido from './Compartido.js';</code></td></tr>
+<div class="table-wrapper"><table><thead><tr><th><code>Compartido.js</code></th><th><code>Padre.js</code></th></tr></thead><tbody>
+<tr><td><code>export default function Compartido() {}</code></td><td><code>import Compartido from './Compartido.js';</code></td></tr>
 </tbody></table>
 </div>
 <blockquote>
 <p><strong>❓ Ejercicio 6:</strong> <em>Corrige el siguiente código para que se exporten e importen correctamente los componentes utilizados en <code>App.js</code>.</em></p>
+</blockquote>
 <div class="sandpack" data-width="73"><pre data-file="App.js">
 export default function App() { 
   return (
@@ -257,7 +258,6 @@ body {
   font-family: sans-serif;
 }
 </pre></div>
-</blockquote>
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
 <p>En los ejemplos anteriores, ese componente raíz era <code>App</code>.</p>
 </div>
