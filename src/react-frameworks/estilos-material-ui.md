@@ -8,4 +8,4 @@ Material UI es un framework que proporciona [elementos del interfaz de usuario](
 
 > **❓ Ejercicio 10:** _Abre el directorio del proyecto con el VsCode y familiarízate con su código. Identifica los componentes principales y cómo se ha configurado la navegación entre ellos con React Router._
 
-> **📚 Tarea final:** _En el VsCode busca globalmente todos los "ToDo". Completa por orden las 10 tareas indicadas en los "ToDo". Adjunta a la entrega las respuestas de los 10 ejercicios anteriores y un ZIP de este proyecto con tus modificaciones._
+> **📚 Tarea final:** _En el VsCode busca globalmente todos los "ToDo". Completa por orden las tareas indicadas en los "ToDo". Adjunta a la entrega un **ZIP conteniendo solo la carpeta `src`** de este proyecto con tus modificaciones. También adjunta las respuestas de los ejercicios de esta web._
