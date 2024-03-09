@@ -193,6 +193,10 @@ blockquote {
   cursor: help;
 }
 
+.answer-span {
+  display: none;
+}
+
 #answer-stats {
   text-align: right;
   width: 100%;
@@ -283,5 +287,18 @@ blockquote {
   
   .fa {
       display: none !important;
+  }
+
+  .answer-area {
+    display: none;
+  }
+
+  .answer-span {
+    display: block;
+    overflow: visible;
+    white-space: pre;
+    white-space: pre-wrap;
+    border: 1px dotted;
+    padding: 1rem;
   }
 }

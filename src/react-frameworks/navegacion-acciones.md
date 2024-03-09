@@ -5,11 +5,13 @@
 Los componentes, además de presentar datos, permiten al usuario realizar **acciones que crean, actualizan o borran datos en el servidor**. React Router facilita implementar esas operaciones mediante su componente `<Form>`[^1] y una función de envío que definimos en el `action` de la configuración de la ruta.
 
 ```js
-import { Form } from "react-router-dom";
+import { Form, useActionData } from "react-router-dom";
 ...
 export default function UnComponente() {
+  // Aquí recibiremos el resultado de la acción cuando se envíe
+  const actionResult = useActionData();
   return (
-    <Form method="post" action="/una-ruta">
+    <Form method="post">
       ...
       <button type="submit">Enviar</button>
     </Form>
@@ -22,23 +24,24 @@ import { redirect } from "react-router-dom";
 ...
 [{
   path: '/una-ruta',
+  element: <UnComponente/>
   action: () => {
-    fetch('/api/recurso/', {method: 'post', body: ...});
-    return redirect('/otra-ruta');
+    return fetch('/api/recurso/', {method: 'post', body: ...});
   }
 }, ... otras rutas ... ];
 ```
 
-<div class="sandpack" data-height="350px" data-width="65"><pre data-file="Login.jsx">
-import { Form, useNavigation } from "react-router-dom";
+<div class="sandpack" data-height="350px" data-width="65" data-navigator="true"><pre data-file="Login.jsx">
+import { Form, useNavigation, useActionData } from "react-router-dom";
 export default function Login() {
+  const loginError = useActionData();
   const navigation = useNavigation();
   const busy = navigation.state === 'submitting' || 
                navigation.state === 'loading';
   return (
     &lt;>
       &lt;main>
-        &lt;Form method="post" action="/login">
+        &lt;Form method="post">
           &lt;fieldset disabled={busy}>
             &lt;legend>Login&lt;/legend>
             &lt;label>
@@ -69,7 +72,7 @@ export default function Inicio() {
   return (
     &lt;>
       &lt;main>
-        &lt;p>Bienvenido, {datosUsuario.email}.&lt;/p>
+        &lt;p>Bienvenido {datosUsuario.email}&lt;/p>
         &lt;button type="submit" disabled={busy}>Salir&lt;/button>
       &lt;/main>
       &lt;footer>
@@ -126,11 +129,13 @@ button {
 </pre><pre data-file="api.js" data-hidden="true">
 const user = {email: null};
 export function login(email, pass) {
+  const params = {method: 'post', body: JSON.stringify({email, pass})};
+  if (pass === 'incorrecta') return fetch('https://httpbin.org/status/401', params);
   user.email = email;
-  const body = JSON.stringify({});
-  return fetch('https://httpbin.org/delay/2', {method: 'post', body});
+  return fetch('https://httpbin.org/delay/2', params);
 }
 export function logout() {
+  user.email = null
   return fetch('https://httpbin.org/delay/1');
 }
 export function getUser() {
@@ -149,14 +154,13 @@ import "./styles.css";
 // Configuración de rutas y componentes
 const router = createBrowserRouter([{
   path: "/",
-  element: &lt;Login/>
-},{
-  path: "/login",
+  element: &lt;Login/>,
   action: async ({ request }) => {
     const formData = await request.formData();
     const loginRes = await login(
       formData.get("email"), formData.get("pass"));
-    return redirect(`/inicio`);
+    if (loginRes.ok) return redirect(`/inicio`);
+    return {status: loginRes.status};
   }
 },{
   path: "/inicio",
@@ -181,6 +185,8 @@ createRoot(document.getElementById("root")).render(
 }
 </pre></div>
 
-> **❓ Ejercicio 5:** _Estudia el código anterior y comprende cómo se ha implementado el login. Completa el código para que al pulsar el botón "Salir" se llame al API `logout()` y se redirija a la ruta inicial de login._
+> **❓ Ejercicio 5:** _Estudia el código anterior y comprende cómo se ha implementado el login (utilízalo con cualquier email/clave). De manera similar, completa el código para que al pulsar el botón "Salir" se llame al API `logout()` y se redirija a la ruta inicial de login._
+
+> **❓ Ejercicio 6:** _Cambia "Clave:" por "Clave incorrecta!" cuando la acción de login retorne `401`. Nota: puedes reproducir esa situación utilizando como clave: incorrecta_
 
 [^1]: Su objetivo es parecido al del elemento `<form>` nativo de HTML, pero la forma en la que se realiza es totalmente diferente.
