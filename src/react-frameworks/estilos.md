@@ -8,11 +8,11 @@ Existen varios **sistemas para gestionar la presentación** de una aplicación R
 - Definiendo el CSS en JS utilizando una [librería](https://emotion.sh/docs/introduction)
 - Utilizando un framework CSS con [estilos](https://tailwindcss.com/) o [componentes UI](https://mui.com/material-ui/) predefinidos
 
-> **❓ Ejercicio 6:** _Abre el proyecto `mi-app-react` generado anteriormente con el VSCode e identifica cuál de los sistemas anteriores utiliza para gestionar la presentación._
+> **❓ Ejercicio 7:** _Abre con el VSCode el proyecto `mi-app-react` generado anteriormente, e identifica cuál de los sistemas anteriores utiliza para gestionar la presentación._
 
-> **❓ Ejercicio 7:** _Ejecuta `npm run dev` en el terminal y teclea <kbd>o</kbd> <kbd>↲</kbd>, añade la clase CSS `.card {padding: 20em;}` al fichero `src/index.css`, e identifica el problema que se produce con los estilos._
+> **❓ Ejercicio 8:** _Ejecuta `npm run dev` en el terminal y teclea <kbd>o</kbd> <kbd>↲</kbd>, añade la clase CSS `.card {padding: 20em;}` al fichero `src/index.css`, e identifica el problema que se produce con los estilos._
 
-> **❓ Ejercicio 8:** _Para solventar el problema:_
+> **❓ Ejercicio 9:** _Para solventar el problema:_
 > 1. _Crea el fichero `src/App.module.css` con este contenido: `.card {padding: 2em;}`_
 > 2. _En `src/App.jsx` añade `import styles from './App.module.css';` y cambia `className="card"` por `className={styles.card}`_
 >

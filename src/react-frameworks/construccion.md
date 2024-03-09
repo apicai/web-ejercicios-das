@@ -14,13 +14,13 @@ NodeJS es el entorno de ejecución que nos permite montar el entorno de desarrol
    npm run dev
    ```
 1. Teclea <kbd>o</kbd> <kbd>↲</kbd> en el terminal
-1. Abre el directorio `mi-app-react` con el VSCode, y modifica el fichero `src/App.jsx` varias veces y observa el resultado en el navegador
+1. Abre el directorio `mi-app-react` con el VSCode, y modifica el JSX del fichero `src/App.jsx`, guarda y observa el resultado en el navegador
 1. Vuelve al terminal y teclea <kbd>q</kbd> <kbd>↲</kbd>, y ejecuta:
    ```bash
    npm run build
    npm run preview
    ```
-1. Vuelve a repetir los pasos 3 y 4
+1. Vuelve a repetir los pasos 2 y 3
 
 > **❓ Ejercicio 1:** _Observando el resultado de los comandos ejecutados y el comportamiento del entorno, explica qué hace cada comando `npm`[^3] asociándolos a los símbolos ⓐⓑⓒⓓⓔ en el diagrama anterior._
 

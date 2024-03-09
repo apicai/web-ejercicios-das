@@ -37,6 +37,7 @@
   function fitContent(element) {
     element.style.height = "5px";
     element.style.height = (element.scrollHeight + 12)+"px";
+    document.getElementById(element.id + '-span').textContent = element.value;
   }
   // All questions in current page
   function getQuestions() {
@@ -52,7 +53,7 @@
     const id = global.location.pathname + "#" + questionNumber;
     question.addEventListener('keydown', e => e.stopPropagation());
     question.className = 'question';
-    question.innerHTML += '<p><textarea id="' + id + '" class="answer-area" placeholder="Respuesta..."></textarea></p>';
+    question.innerHTML += '<p><textarea id="' + id + '" class="answer-area" placeholder="Respuesta..."></textarea><span id="' + id + '-span" class="answer-span"></span></p>';
   }
   // Summary of answers
   function answerStats() {
@@ -74,7 +75,7 @@
 
   getQuestions().forEach((q, i) => answerArea(q, i));
   getAnswers().forEach((a, i) => {
-    a.onkeyup = () => fitContent(a) || save(a.id, a.value) || updateAnswerStats();
+    a.oninput = () => fitContent(a) || save(a.id, a.value) || updateAnswerStats();
     a.value = read(a.id);
     a.value && fitContent(a);
   });

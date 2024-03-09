@@ -79,7 +79,7 @@ export default function Seccion2() {
     &lt;/article>
   );
 }
-</pre><pre data-file="Error.jsx" data-hidden="true">
+</pre><pre data-file="Error.jsx">
 export default function Error() {
   return (
     &lt;article>
@@ -210,4 +210,4 @@ createRoot(document.getElementById("root")).render(
 
 > **❓ Ejercicio 3:** _Estudia el código anterior y comprende cómo se ha configurado la carga de los datos de la "Sección 1". Completa el código para que en la "Sección 2" se carguen los datos que devuelve el API `getIp()`. Luego, utiliza `getDataWithError()` en su lugar y describe el comportamiento._
 
-> **❓ Ejercicio 4:** _Identifica en `Padre.jsx` el código que detecta que se están cargando datos para modificar la presentación e indicarlo al usuario._
+> **❓ Ejercicio 4:** _Identifica en `Padre.jsx` el código que detecta que se están cargando datos para modificar la presentación e indicarlo al usuario. Indica también qué elementos cambian su presentación._
