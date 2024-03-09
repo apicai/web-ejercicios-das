@@ -180,11 +180,13 @@
 <h2 id="navegación"><a class="header" href="#navegación">Navegación</a></h2>
 <h3 id="acciones"><a class="header" href="#acciones">Acciones</a></h3>
 <p>Los componentes, además de presentar datos, permiten al usuario realizar <strong>acciones que crean, actualizan o borran datos en el servidor</strong>. React Router facilita implementar esas operaciones mediante su componente <code>&lt;Form&gt;</code><sup class="footnote-reference"><a href="#1">1</a></sup> y una función de envío que definimos en el <code>action</code> de la configuración de la ruta.</p>
-<pre><code class="language-js">import { Form } from "react-router-dom";
+<pre><code class="language-js">import { Form, useActionData } from "react-router-dom";
 ...
 export default function UnComponente() {
+  // Aquí recibiremos el resultado de la acción cuando se envíe
+  const actionResult = useActionData();
   return (
-    &lt;Form method="post" action="/una-ruta"&gt;
+    &lt;Form method="post"&gt;
       ...
       &lt;button type="submit"&gt;Enviar&lt;/button&gt;
     &lt;/Form&gt;
@@ -195,22 +197,23 @@ export default function UnComponente() {
 ...
 [{
   path: '/una-ruta',
+  element: &lt;UnComponente/&gt;
   action: () =&gt; {
-    fetch('/api/recurso/', {method: 'post', body: ...});
-    return redirect('/otra-ruta');
+    return fetch('/api/recurso/', {method: 'post', body: ...});
   }
 }, ... otras rutas ... ];
 </code></pre>
-<div class="sandpack" data-height="350px" data-width="65"><pre data-file="Login.jsx">
-import { Form, useNavigation } from "react-router-dom";
+<div class="sandpack" data-height="350px" data-width="65" data-navigator="true"><pre data-file="Login.jsx">
+import { Form, useNavigation, useActionData } from "react-router-dom";
 export default function Login() {
+  const loginError = useActionData();
   const navigation = useNavigation();
   const busy = navigation.state === 'submitting' || 
                navigation.state === 'loading';
   return (
     &lt;>
       &lt;main>
-        &lt;Form method="post" action="/login">
+        &lt;Form method="post">
           &lt;fieldset disabled={busy}>
             &lt;legend>Login&lt;/legend>
             &lt;label>
@@ -241,7 +244,7 @@ export default function Inicio() {
   return (
     &lt;>
       &lt;main>
-        &lt;p>Bienvenido, {datosUsuario.email}.&lt;/p>
+        &lt;p>Bienvenido {datosUsuario.email}&lt;/p>
         &lt;button type="submit" disabled={busy}>Salir&lt;/button>
       &lt;/main>
       &lt;footer>
@@ -298,11 +301,13 @@ button {
 </pre><pre data-file="api.js" data-hidden="true">
 const user = {email: null};
 export function login(email, pass) {
+  const params = {method: 'post', body: JSON.stringify({email, pass})};
+  if (pass === 'incorrecta') return fetch('https://httpbin.org/status/401', params);
   user.email = email;
-  const body = JSON.stringify({});
-  return fetch('https://httpbin.org/delay/2', {method: 'post', body});
+  return fetch('https://httpbin.org/delay/2', params);
 }
 export function logout() {
+  user.email = null
   return fetch('https://httpbin.org/delay/1');
 }
 export function getUser() {
@@ -321,14 +326,13 @@ import "./styles.css";
 // Configuración de rutas y componentes
 const router = createBrowserRouter([{
   path: "/",
-  element: &lt;Login/>
-},{
-  path: "/login",
+  element: &lt;Login/>,
   action: async ({ request }) => {
     const formData = await request.formData();
     const loginRes = await login(
       formData.get("email"), formData.get("pass"));
-    return redirect(`/inicio`);
+    if (loginRes.ok) return redirect(`/inicio`);
+    return {status: loginRes.status};
   }
 },{
   path: "/inicio",
@@ -353,7 +357,10 @@ createRoot(document.getElementById("root")).render(
 }
 </pre></div>
 <blockquote>
-<p><strong>❓ Ejercicio 5:</strong> <em>Estudia el código anterior y comprende cómo se ha implementado el login. Completa el código para que al pulsar el botón "Salir" se llame al API <code>logout()</code> y se redirija a la ruta inicial de login.</em></p>
+<p><strong>❓ Ejercicio 5:</strong> <em>Estudia el código anterior y comprende cómo se ha implementado el login (utilízalo con cualquier email/clave). De manera similar, completa el código para que al pulsar el botón "Salir" se llame al API <code>logout()</code> y se redirija a la ruta inicial de login.</em></p>
+</blockquote>
+<blockquote>
+<p><strong>❓ Ejercicio 6:</strong> <em>Cambia "Clave:" por "Clave incorrecta!" cuando la acción de login retorne <code>401</code>. Nota: puedes reproducir esa situación utilizando como clave: incorrecta</em></p>
 </blockquote>
 <div class="footnote-definition" id="1"><sup class="footnote-definition-label">1</sup>
 <p>Su objetivo es parecido al del elemento <code>&lt;form&gt;</code> nativo de HTML, pero la forma en la que se realiza es totalmente diferente.</p>
