@@ -10,7 +10,7 @@ from rest_framework import serializers
 class UnModeloSerializer(serializers.ModelSerializer):
     class Meta:
         model = UnModelo
-        fields = ['campos', 'de', 'UnModelo', 'a incluir', 'en el JSON']
+        fields = ['campos', 'de', 'UnModelo', 'a', 'incluir', 'en', 'el', 'JSON']
 ```
 
-> **❓ Ejercicio 5:** _Añade las propiedades anteriores, pero con los valores adecuados, al `UsuarioSerializer` del proyecto para que mapee el modelo `Usuario` y todos sus campos._
+> **❓ Ejercicio 5:** _Añade las propiedades `model` y `fields` anteriores, pero con los valores adecuados, al `UsuarioSerializer` del proyecto para que mapee el modelo `Usuario` y todos sus campos._

@@ -7,8 +7,8 @@ Sobre los modelos definidos, Django ofrece una serie de funciones que permiten h
 > **❓ Ejercicio 3:** _En el terminal de VSCode ejecuta `python manage.py shell`, pega el siguiente código, y realiza las operaciones indicadas sobre el modelo `Usuario`. Cuando termines, sal pulsando <kbd>CTRL</kbd> + <kbd>D</kbd>._
 > ```python
 > from api.users.models import Usuario
-> # 1. Crea dos usuarios con diferente nombre, tel, email y password
-> # 2. Recupera un usuario a partir de su nombre
-> # 3. Actualiza el tel del usuario recuperado
-> # 4. Elimina un usuario a partir de su email
+> # 1. Crea un usuario en BD con todos los campos: nombre, tel, email y password
+> # 2. Recupera el usuario de BD a partir de su email
+> # 3. Actualiza el nombre del usuario recuperado en BD
+> # 4. Elimina el usuario de BD a partir de su nombre
 > ```
