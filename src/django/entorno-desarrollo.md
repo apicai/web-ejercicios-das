@@ -14,7 +14,7 @@ Trabajaremos sobre este [proyecto base](./files/p4.zip) en el que iremos constru
    django-admin --version
    ```
 
-   > ⚠️ **Importante**: _En caso de que falle la activación del Venv (y el comando anterior), cierra VSCode por completo y, en el caso de Windows, ejecuta el siguiente comando en el PowerShell (luego vuelve a repetir el paso 6 anterior):_
+   > ⚠️ **Importante**: _En caso de que falle la activación del Venv (y el comando anterior), cierra VSCode por completo y, en el caso de Windows, también ejecuta el siguiente comando en el PowerShell (luego vuelve a repetir el paso 6 anterior):_
    > ```powershell
    > Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
    > ```

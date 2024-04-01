@@ -82,4 +82,6 @@
   - [Unitarios](django/tests-unitarios.md)
   - [Integración](django/tests-integracion.md)
   - [Extremo a extremo](django/tests-e2e.md)
+    - [API](django/tests-e2e-api.md)
+    - [UI](django/tests-e2e-ui.md)
 - [Documentación](django/documentacion.md)
