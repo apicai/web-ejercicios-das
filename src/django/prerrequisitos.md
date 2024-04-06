@@ -14,4 +14,6 @@ Para desarrollar utilizaremos también [Visual Studio Code](https://code.visuals
 
 - [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) para probar el API implementada
 
+También utilizaremos [Cypress](https://download.cypress.io/app) para realizar pruebas de interfaces web.
+
 
