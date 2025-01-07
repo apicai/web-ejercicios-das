@@ -84,7 +84,7 @@ export default function Inicio() {
 </pre><pre data-file="styles.css" data-hidden="true">
 @font-face {
   font-family: "Virgil";
-  src: url("https://virgil.excalidraw.com/Virgil.woff2");
+  src: url("https://excalidraw.com/Virgil.woff2");
 }
 body {
   margin: 10px;
