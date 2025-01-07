@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="es" class="light" dir="ltr">
+<html lang="es" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -7,7 +7,7 @@
 
 
         <!-- Custom HTML head -->
-        
+
         <meta name="description" content="Ejercicios y prácticas">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff">
@@ -30,15 +30,17 @@
         <!-- Custom theme stylesheets -->
         <link rel="stylesheet" href="../theme/theme.css">
 
-    </head>
-    <body class="sidebar-visible no-js">
-    <div id="body-container">
+
         <!-- Provide site root to javascript -->
         <script>
             var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
-
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
         <script>
             try {
@@ -60,19 +62,16 @@
             var theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            var body = document.querySelector('body');
-            body.classList.remove('no-js')
-            body.classList.add('js');
+            html.classList.add("js");
         </script>
 
         <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var body = document.querySelector('body');
             var sidebar = null;
             var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
@@ -82,45 +81,25 @@
                 sidebar = 'hidden';
             }
             sidebar_toggle.checked = sidebar === 'visible';
-            body.classList.remove('sidebar-visible');
-            body.classList.add("sidebar-" + sidebar);
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><li class="part-title">Introducción</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../index.html">Asignatura</a></li><li class="chapter-item expanded affix "><li class="part-title">HTTP</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../protocolos/intro.html">Introducción</a></li><li class="chapter-item expanded "><a href="../protocolos/prerrequisitos.html">Prerrequisitos</a></li><li class="chapter-item expanded "><a href="../protocolos/conexiones.html">Conexiones</a></li><li class="chapter-item expanded "><a href="../protocolos/peticiones.html">Peticiones</a></li><li class="chapter-item expanded "><a href="../protocolos/respuestas.html">Respuestas</a></li><li class="chapter-item expanded "><a href="../protocolos/servidor.html">Servidor</a></li><li class="chapter-item expanded "><a href="../protocolos/cookies.html">Cookies</a></li><li class="chapter-item expanded affix "><li class="part-title">HTML+CSS+JS</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../html/intro.html">Introducción</a></li><li class="chapter-item expanded "><a href="../html/prerrequisitos.html">Prerrequisitos</a></li><li class="chapter-item expanded "><a href="../html/login.html">Login</a></li><li class="chapter-item expanded "><a href="../html/registro.html">Registro</a></li><li class="chapter-item expanded "><a href="../html/principal.html" class="active">Principal</a></li><li class="chapter-item expanded "><a href="../html/perfil.html">Perfil</a></li><li class="chapter-item expanded "><a href="../html/otros.html">Otros</a></li><li class="chapter-item expanded affix "><li class="part-title">React</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../react/intro.html">Introducción</a></li><li class="chapter-item expanded "><a href="../react/prerrequisitos.html">Prerrequisitos</a></li><li class="chapter-item expanded "><a href="../react/tecnologias.html">Tecnologías</a></li><li class="chapter-item expanded "><a href="../react/componentes.html">Componentes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/componentes-reutilizacion.html">Reutilización</a></li><li class="chapter-item expanded "><a href="../react/componentes-anidamiento.html">Anidamiento</a></li><li class="chapter-item expanded "><a href="../react/componentes-ficheros.html">Ficheros</a></li><li class="chapter-item expanded "><a href="../react/componentes-listas.html">Listas</a></li></ol></li><li class="chapter-item expanded "><a href="../react/estado.html">Estado</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/estado-funcionamiento.html">Funcionamiento</a></li><li class="chapter-item expanded "><a href="../react/estado-interno.html">Interno</a></li><li class="chapter-item expanded "><a href="../react/estado-externo.html">Externo</a></li><li class="chapter-item expanded "><a href="../react/estado-objetos.html">Objetos</a></li><li class="chapter-item expanded "><a href="../react/estado-arrays.html">Arrays</a></li></ol></li><li class="chapter-item expanded "><a href="../react/refs.html">Refs</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/refs-dom.html">DOM</a></li><li class="chapter-item expanded "><a href="../react/refs-callback.html">Callback</a></li></ol></li><li class="chapter-item expanded "><a href="../react/efectos.html">Efectos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react/efectos-funcionamiento.html">Funcionamiento</a></li><li class="chapter-item expanded "><a href="../react/efectos-dependencias.html">Dependencias</a></li><li class="chapter-item expanded "><a href="../react/efectos-limpieza.html">Limpieza</a></li></ol></li><li class="chapter-item expanded "><a href="../react/hooks.html">Hooks</a></li><li class="chapter-item expanded affix "><li class="part-title">React frameworks</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../react-frameworks/intro.html">Introducción</a></li><li class="chapter-item expanded "><a href="../react-frameworks/prerrequisitos.html">Prerrequisitos</a></li><li class="chapter-item expanded "><a href="../react-frameworks/construccion.html">Construcción</a></li><li class="chapter-item expanded "><a href="../react-frameworks/navegacion.html">Navegación</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react-frameworks/navegacion-datos.html">Datos</a></li><li class="chapter-item expanded "><a href="../react-frameworks/navegacion-acciones.html">Acciones</a></li></ol></li><li class="chapter-item expanded "><a href="../react-frameworks/estilos.html">Estilos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../react-frameworks/estilos-material-ui.html">Material UI</a></li></ol></li><li class="chapter-item expanded "><li class="part-title">Django</li><li class="spacer"></li><li class="chapter-item expanded "><a href="../django/intro.html">Introducción</a></li><li class="chapter-item expanded "><a href="../django/prerrequisitos.html">Prerrequisitos</a></li><li class="chapter-item expanded "><a href="../django/entorno-desarrollo.html">Entorno desarrollo</a></li><li class="chapter-item expanded "><a href="../django/modelos.html">Modelos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/modelos-operaciones.html">Operaciones</a></li><li class="chapter-item expanded "><a href="../django/modelos-admin.html">Administración</a></li></ol></li><li class="chapter-item expanded "><a href="../django/serializadores.html">Serializadores</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/serializadores-modelos.html">De modelos</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/serializadores-modelos-validaciones.html">Validaciones</a></li><li class="chapter-item expanded "><a href="../django/serializadores-modelos-operaciones.html">Operaciones BD</a></li></ol></li><li class="chapter-item expanded "><a href="../django/serializadores-genericos.html">Genéricos</a></li></ol></li><li class="chapter-item expanded "><a href="../django/vistas.html">Vistas</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/vistas-create.html">CreateAPIView</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/vistas-create-post.html">Post</a></li></ol></li><li class="chapter-item expanded "><a href="../django/vistas-retrieve.html">RetrieveUpdateDestroyAPIView</a></li><li class="chapter-item expanded "><a href="../django/vistas-destroy.html">DestroyAPIView</a></li></ol></li><li class="chapter-item expanded "><a href="../django/tests.html">Tests</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/tests-unitarios.html">Unitarios</a></li><li class="chapter-item expanded "><a href="../django/tests-integracion.html">Integración</a></li><li class="chapter-item expanded "><a href="../django/tests-e2e.html">Extremo a extremo</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../django/tests-e2e-api.html">API</a></li><li class="chapter-item expanded "><a href="../django/tests-e2e-ui.html">UI</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../django/documentacion.html">Documentación</a></li></ol>
-            </div>
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle">
                 <div class="sidebar-resize-indicator"></div>
             </div>
         </nav>
 
-        <!-- Track and set sidebar scroll position -->
-        <script>
-            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
-            sidebarScrollbox.addEventListener('click', function(e) {
-                if (e.target.tagName === 'A') {
-                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
-                }
-            }, { passive: true });
-            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
-            sessionStorage.removeItem('sidebar-scroll');
-            if (sidebarScrollTop) {
-                // preserve sidebar scroll position when navigating via links within sidebar
-                sidebarScrollbox.scrollTop = sidebarScrollTop;
-            } else {
-                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
-                var activeSection = document.querySelector('#sidebar .active');
-                if (activeSection) {
-                    activeSection.scrollIntoView({ block: 'center' });
-                }
-            }
-        </script>
-
         <div id="page-wrapper" class="page-wrapper">
 
             <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
                         <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
